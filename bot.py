@@ -7,10 +7,18 @@ from discord.ext import commands
 from discord.utils import get
 from discord_webhook import DiscordWebhook
 
-bot = commands.Bot(command_prefix = '&')
+activity = discord.Game(name='XHack', type=1)
+a = 0
+b = 1
+c = 1
+d = 2
+intents = discord.Intents.all()
+
+bot = commands.Bot(command_prefix = '&', intents=intents)
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(status='XHack', activity=activity)
     print(f'Бот запущен. Ник бота: {bot.user}')
 
 
