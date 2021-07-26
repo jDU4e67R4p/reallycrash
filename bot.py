@@ -75,4 +75,5 @@ async def banall(ctx):
         except:
             continue
 
-bot.run('ODY5MTg4MjA4OTk3NTg5MDQy.YP6kmQ.Yqdms91KIp7KYd3WSSjIkNtiMCY')
+token = os.environ.get('BOT_TOKEN')
+bot.run( str(token) )
